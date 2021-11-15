@@ -1,0 +1,191 @@
+/* CSS variabales */
+:root{
+    --primary-color: rgba(88, 208, 255, 0.5);
+    --primary-color-light: rgba(88, 208, 255, 1);
+    --secondary-color:rgb(0, 172, 240);
+    --box-shadow: 0 10px 20px 2px rgba(0, 0, 0, 0.3);
+    --box-shadow-active: 0 5px 10px 0px rgba(0, 0, 0, 0.5);
+    --border-radius: 10px;
+    --on-primary-color:rgb(0, 146, 134);
+    --on-secondary-color: rgba(0, 0, 0, 0.733);
+}
+
+html{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    background: whitesmoke;
+}
+/* add bookmark button styles */
+.addBookmark-container{
+    background: var(--primary-color);
+    max-width: auto;
+    width: 200px;
+    margin:15px auto;
+    padding: 10px;
+    border-radius: var(--border-radius);
+    user-select: none;
+    cursor: pointer;
+    box-shadow: var(--box-shadow);
+}
+.addBookmark-container:hover{
+    filter: brightness(110%);
+}
+.addBookmark-container:active{
+    transform: translate(0,5px);
+    box-shadow: var(--box-shadow-active);
+}
+h1{
+    text-align: center;
+    font-size: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: var(--on-primary-color);
+}
+/* bookmarks container */
+.bookmark-container{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: auto;
+    width: 98%;
+    margin: 40px auto;
+}
+/* bookmark itself */
+.bookmark-item{
+    margin: 5px 5px;
+    border-radius: var(--border-radius);
+    background: var(--primary-color);
+    color: var(--on-primary-color);
+    width: auto;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    user-select: none;
+    text-align: center;
+}
+.bookmark-item:hover{
+    box-shadow: var(--box-shadow);
+    transform: translate(0,-5px);
+}
+.close{
+    font-size: 20px;
+    cursor: pointer;
+    float: right;
+    position: relative;
+    top: 10px;
+    left: -10px;
+    
+}
+.name{
+    margin: 40px 20px 20px;
+}
+/* model overlay */
+.model-overlay{
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+/* show overlay */
+.show-overlay{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: overlay 0.5s ease-in-out;
+}
+/* model container */
+.model{
+    background: var(--primary-color-light);
+    width: 30%;
+    height: auto;
+    border-radius: var(--border-radius);
+}
+/* close model */
+#close-model{
+    font-size: 20px;
+    /* float: right; */
+    position: relative;
+    top: 10px;
+    right: -380px;
+    cursor: pointer;
+    
+}
+/* model header */
+.model-header{
+    background: var(--secondary-color);
+    height: 80px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+/* header text */
+.header-title{
+    margin: 10px;
+}
+h3{
+    text-align: center;
+    margin: 0px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: var(--on-secondary-color);
+    text-transform: uppercase;
+}
+/* form container */
+.form-group{
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
+}
+/* input label */
+label{
+    color: var(--on-primary-color);
+    margin-bottom: 5px;
+    user-select: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+/* form input */
+input{
+    padding-left: 10px;
+    height: 30px;
+    border-radius: var(--border-radius);
+    border: none;
+    outline: none;
+    background: rgba(255, 255, 255, 0.65);
+}
+/* form button */
+button{
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 700;
+    margin: 0px 30px 30px;
+    padding: 10px 30px;
+    border-radius: var(--border-radius);
+    border: none;
+    background: var(--secondary-color);
+    box-shadow: var(--box-shadow);
+    text-transform: uppercase;
+}
+/* when it is active */
+button:active{
+    transform: translate(0,2px);
+    box-shadow: var(--box-shadow-active);
+}
+
+/* overlay animation  */
+@keyframes overlay {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }    
+}
+/* responsive for mobiles less than 600px */
+@media screen and (max-width: 600px){
+    .bookmark-container{
+        flex-direction: column;
+    }
+    .model{
+        width: 80%;
+    }
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>myTemplate</title>
+    <!-- favicon icon -->
+    <link rel="icon" type="image/png" href="https://www.google.com/s2/favicons?domain=education.com">
+    <!-- font awesome cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+    <!-- font awesome kit if cdn not works-->
+    <script src="https://kit.fontawesome.com/1da7551fd0.js" crossorigin="anonymous"></script>
+    <!-- local stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- bookmark button to open model -->
+    <div class="addBookmark-container" id="addBookmark-container">
+        <h1>ADD BOOKMARK</h1>
+    </div>
+    <!-- all bookmarks will be saved -->
+    <div class="bookmark-container">
+        <!-- each bookmark -->
+        <div class="bookmark-item">
+            <i class="fa-solid fa-xmark close"></i>
+            <div class="name">
+                <img src="https://www.google.com/s2/favicons?domain=education.com" alt="favicon">
+                <span>webiste name</span>
+            </div>
+        </div>
+        <div class="bookmark-item">
+            <i class="fa-solid fa-xmark close"></i>
+            <div class="name">
+                <img src="https://www.google.com/s2/favicons?domain=education.com" alt="favicon">
+                <span>webiste name</span>
+            </div>
+        </div>
+        <div class="bookmark-item">
+            <i class="fa-solid fa-xmark close"></i>
+            <div class="name">
+                <img src="https://www.google.com/s2/favicons?domain=education.com" alt="favicon">
+                <span>webiste name</span>
+            </div>
+        </div>
+        <div class="bookmark-item">
+            <i class="fa-solid fa-xmark close"></i>
+            <div class="name">
+                <img src="https://www.google.com/s2/favicons?domain=education.com" alt="favicon">
+                <span>webiste name</span>
+            </div>
+        </div>
+        <div class="bookmark-item">
+            <i class="fa-solid fa-xmark close"></i>
+            <div class="name">
+                <img src="https://www.google.com/s2/favicons?domain=education.com" alt="favicon">
+                <span>webiste name</span>
+            </div>
+        </div>
+    </div>
+    <!-- model to add bookmark -->
+    <div class="model-overlay" id="model-overlay" hidden>
+        <div class="model">
+            <div class="model-header">
+                <i class="fa-solid fa-xmark" id="close-model"></i>
+                <div class="header-title">
+                    <h3>add to your bookmark</h3>
+                </div>
+            </div>
+            <form>
+                <div class="form-group">
+                    <label for="name">Name :</label>
+                    <input type="text">
+                </div>
+                <div class="form-group">
+                    <label for="name">Address :</label>
+                    <input type="text">
+                </div>
+                <button>Add</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- scripts here -->
+    <script src="script.js"></script>
+</body>
+</html>
