@@ -20,43 +20,8 @@
         <h1>ADD BOOKMARK</h1>
     </div>
     <!-- all bookmarks will be saved -->
-    <div class="bookmark-container">
+    <div class="bookmark-container" id="bookmark-container">
         <!-- each bookmark -->
-        <div class="bookmark-item">
-            <i class="fa-solid fa-xmark close"></i>
-            <div class="name">
-                <img src="https://www.google.com/s2/favicons?domain=education.com" alt="favicon">
-                <span>webiste name</span>
-            </div>
-        </div>
-        <div class="bookmark-item">
-            <i class="fa-solid fa-xmark close"></i>
-            <div class="name">
-                <img src="https://www.google.com/s2/favicons?domain=education.com" alt="favicon">
-                <span>webiste name</span>
-            </div>
-        </div>
-        <div class="bookmark-item">
-            <i class="fa-solid fa-xmark close"></i>
-            <div class="name">
-                <img src="https://www.google.com/s2/favicons?domain=education.com" alt="favicon">
-                <span>webiste name</span>
-            </div>
-        </div>
-        <div class="bookmark-item">
-            <i class="fa-solid fa-xmark close"></i>
-            <div class="name">
-                <img src="https://www.google.com/s2/favicons?domain=education.com" alt="favicon">
-                <span>webiste name</span>
-            </div>
-        </div>
-        <div class="bookmark-item">
-            <i class="fa-solid fa-xmark close"></i>
-            <div class="name">
-                <img src="https://www.google.com/s2/favicons?domain=education.com" alt="favicon">
-                <span>webiste name</span>
-            </div>
-        </div>
     </div>
     <!-- model to add bookmark -->
     <div class="model-overlay" id="model-overlay" hidden>
@@ -70,11 +35,11 @@
             <form>
                 <div class="form-group">
                     <label for="name">Name :</label>
-                    <input type="text">
+                    <input type="text" id="nameElement">
                 </div>
                 <div class="form-group">
                     <label for="name">Address :</label>
-                    <input type="text">
+                    <input type="text" id="urlElement">
                 </div>
                 <button>Add</button>
             </form>
